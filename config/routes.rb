@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'account_activationsrails/generate'
+  # get 'account_activationsrails/generate'
 
-  get 'account_activationsrails/controller'
+  # get 'account_activationsrails/controller'
 
-  get 'account_activationsrails/AccountActivations'
+  # get 'account_activationsrails/AccountActivations'
 
   get 'sessions/new'
 
