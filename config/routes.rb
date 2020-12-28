@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'account_activationsrails/generate'
+
+  get 'account_activationsrails/controller'
+
+  get 'account_activationsrails/AccountActivations'
+
   get 'sessions/new'
 
   get 'users/new'
@@ -14,5 +20,7 @@ root 'static_pages#home'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   resources :users
+  resources :account_activations, only: [:edit]
+
 
 end
