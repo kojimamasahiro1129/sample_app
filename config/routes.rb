@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   # get 'account_activationsrails/generate'
 
   # get 'account_activationsrails/controller'
@@ -21,6 +25,7 @@ root 'static_pages#home'
   delete '/logout',  to: 'sessions#destroy'
   resources :users
   resources :account_activations, only: [:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
 
 
 end
