@@ -65,7 +65,7 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = '<your heroku app>.herokuapp.com'
+  host = '<vast-peak-29674>.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :port           => ENV['MAILGUN_SMTP_PORT'],
@@ -74,7 +74,7 @@ Rails.application.configure do
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
     :domain         => host,
     :authentication => :plain,
-  }
+  }rails test
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
